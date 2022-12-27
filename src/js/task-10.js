@@ -27,36 +27,37 @@ function getRandomHexColor() {
  const input = document.querySelector('input')
  const divEl = document.getElementById('boxes')
 
+ const boxe = {
+  width: 30,
+  height: 30,
+}
+
     btnCreate.addEventListener('click', addCreate);
     btnDestroy.addEventListener('click', destroyBoxes);
-    input.addEventListener('input', createBoxes);
-    divEl.addEventListener('click')
+   // input.addEventListener('input', createBoxes);
+   // divEl.addEventListener('click')
 
-    const boxe = {
-      width: 30,
-      height: 30,
-    }
-    
+
 function addCreate (){
-  createBoxes(Number(input.value))
+  createBoxes(Number(input.value));
   
 }
  
 function createBoxes(amount){
   for(let i = 0; i < amount; i += 1){
-    const boxeEl = document.createElement("div")
-    boxeEl.style.width = boxe.width
-    boxeEl.style.height = boxe.height
-    boxeEl.style.backgroundColor = getRandomHexColor()
-    boxeEl.appendChild(divEl)
+    const boxeEl = document.createElement("div");
+    boxeEl.style.width = boxe.width + 'px';
+    boxeEl.style.height = boxe.height + 'px';
+    boxeEl.style.backgroundColor = getRandomHexColor();
+    divEl.appendChild(boxeEl);
   
-      boxe.width += 10 
-      boxe.height += 10 
+      boxe.width += 10;
+      boxe.height += 10;
   }
 }
 
 function destroyBoxes(){
   divEl.innerHTML = "";
   boxe.width = 30;
-  boxe.height = 30
+  boxe.height = 30;
 }

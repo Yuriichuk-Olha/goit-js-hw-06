@@ -9,15 +9,24 @@
 //     всередині яких збільшуй або зменшуй значення лічильника.
 // 3. Оновлюй інтерфейс новим значенням змінної counterValue.
 
-const counter = document.getElementById('counter');
+
+const btnDecrement = document.querySelector('[data-action="decrement"]');
+
+const btnIncrement = document.querySelector('[data-action="increment"]');
+
 const span = document.getElementById('value');
+
 let counterValue = 0;
-counter.addEventListener('click', ({ target }) => {
-  const buttonAction = target.dataset.action;
-  if (buttonAction === 'decrement') counterValue -= 1;
-  else if (buttonAction === 'increment') counterValue += 1;
+
+ btnDecrement.addEventListener('click', function (){
+  if (btnDecrement) counterValue -= 1;
   span.textContent = counterValue;
-});
+})
+
+ btnIncrement.addEventListener('click', function(){
+  if (btnIncrement) counterValue += 1;
+  span.textContent = counterValue;
+})
 
 
 
@@ -27,40 +36,14 @@ counter.addEventListener('click', ({ target }) => {
 
 
 
+//const counter = document.getElementById('counter');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const buttons = document.querySelectorAll('button[type='button']');
-// buttons[0].addEventListener('click', (event) => {
-//   const buttonAction = event.target.dataset.action;
-//   1. if (buttonAction === 'decrement') counterValue -= 1;
-//      span.textContent = counterValue;
-//2. спосіб переберання     
-                    //   switch (buttonAction) {
-                    //     case “decrement”:
-                    //       counterValue -= 1;
-                    //       break;
-                    //     case “increment”:
-                    //       counterValue += 1;
-                    //       break;
-                    //   }
-// });
-// buttons[1].addEventListener('click', (event) => {
-//   const buttonAction = event.target.dataset.action;
-//   if (buttonAction === 'increment') counterValue += 1;
+// counter.addEventListener('click', ({ target }) => {
+//   const buttonAction = target.dataset.action;
+//   console.log("🚀 ~ file: task-04.js:27 ~ counter.addEventListener ~ buttonAction", buttonAction)
+  
+//   if (buttonAction === 'decrement') counterValue -= 1;
+//   else if (buttonAction === 'increment') counterValue += 1;
 //   span.textContent = counterValue;
 // });
 

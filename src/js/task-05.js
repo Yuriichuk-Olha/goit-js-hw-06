@@ -10,7 +10,8 @@ const output = document.getElementById('name-output');
 input.addEventListener('input', ({target}) => {
     const value = target.value;
     if (value.trim() === " ") output.textContent = "Anonymous";
-    else 'name-input' === value
-         output.textContent = value;
+    else ('name-input' === value) 
+    output.textContent = value ||  "Anonymous";
+    
 })
 

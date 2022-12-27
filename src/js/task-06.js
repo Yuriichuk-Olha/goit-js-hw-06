@@ -21,7 +21,7 @@
 
 function onInputBlur(event) {
   if (
-    Number(input.getAttribute("data-length")) ==
+    Number(input.getAttribute("data-length")) ===
     event.target.value.length
    
   ) {
