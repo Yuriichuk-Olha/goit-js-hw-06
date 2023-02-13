@@ -1,8 +1,3 @@
-// HTML містить порожній список ul#ingredients.
-
-// <ul id="ingredients"></ul>
-
-// JavaScript містить масив рядків.
 
 // Напиши скрипт, який для кожного елемента масиву ingredients:
 

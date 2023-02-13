@@ -1,17 +1,3 @@
-// Напиши скрипт управління формою логіна.
-
-// <form class="login-form">
-//   <label>
-//     Email
-//     <input type="email" name="email" />
-//   </label>
-//   <label>
-//     Password
-//     <input type="password" name="password" />
-//   </label>
-//   <button type="submit">Login</button>
-// </form>
-
 // 1. Обробка відправлення форми form.login-form повинна 
 //    відбуватися відповідно до події submit.
 // 2. Під час відправлення форми сторінка не повинна 
